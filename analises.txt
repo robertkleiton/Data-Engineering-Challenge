@@ -1,0 +1,27 @@
+-- relação de hdi com quantidade de emprestimos
+select h.country, h."indicator", count(lt.transaction_report_id) as qtd_loan
+from dca_dataset_loan_transactions as lt
+inner join hdi_human_development_index_hdig_value as h
+on h.country = lt.country_name
+where extract('year' from lt.end_date) between '1989' and '2013'
+group by h.country, h."indicator"
+order by h.country
+
+-- empréstimo sem garantias
+select distinct lt.* from dca_dataset_loan_transactions as lt
+left join dca_dataset_utilization_and_claims as uc
+on lt.guarantee_number = uc.guarantee_number
+where uc.guarantee_number is null;
+
+-- garantias sem empréstimo
+select distinct lt.guarantee_number, uc.* from dca_dataset_utilization_and_claims as uc
+left join dca_dataset_loan_transactions as lt
+on uc.guarantee_number = lt.guarantee_number
+
+-- somatória de cada país 
+select h.country, sum(w.value) as value 
+from world_currencies_conversion_rates as w
+left join hdi_human_development_index_hdig_value as h
+on h.country_code = w.location and h."year" = w."time"
+group by h.country
+order by h.country
