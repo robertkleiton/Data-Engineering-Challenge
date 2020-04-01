@@ -1,16 +1,16 @@
 # Creditas Data Engineering Challenge
 
-Desenvolvimento do ETL para o teste imposto.
+## Desenvolvimento do ETL para o teste imposto.
 Para este teste assumi o seguinte senário para o processamento do mesmo:
 •	Os arquivos datasets.tar.gz são colocados em um bucket do AWS S3 por algum processo externo ou interno que é alimentado todo dia com dados atualizados em uma pasta que chamo de “files_raw” (não particionei a mesma).
 
 # Arquitetura detalhada do ETL.
 
-Fluxograma_ETL.jpg
+## Fluxograma_ETL.jpg
 
 # Preparação do ambiente.
 
-Todas as configurações descritas abaixo são necessárias para pleno funcionamento do ETL. 
+## Todas as configurações descritas abaixo são necessárias para pleno funcionamento do ETL. 
 1.	Criar um bucket no AWS S3.
 2.	Criar o diretório no bucket criado.
 2.1.	<nome_bucket>/files_raw.
