@@ -1,0 +1,18 @@
+### Variaveis do Banco de Dados
+
+VAR_HOST     = 
+VAR_DATABASE = 
+VAR_USER     = 
+VAR_PASSWORD = 
+
+### Variaveis do S3
+
+VAR_BUCKET				= 
+VAR_ACCESS_KEY          = 
+VAR_SECRET_ACCESS_KEY   =
+
+
+PYTHONPATH=$HOME/lib/python
+EDITOR=vim
+
+export PYTHONPATH EDITOR
