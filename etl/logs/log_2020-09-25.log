@@ -1,0 +1,79 @@
+[2020-09-25 01:13:35,927] {main.py:14} INFO - ETL starting
+[2020-09-25 01:13:35,927] {s3_download_data.py:13} INFO - trying connect to AWS S3...
+[2020-09-25 01:13:37,400] {s3_download_data.py:16} INFO - connected to AWS S3...
+[2020-09-25 01:13:37,400] {s3_download_data.py:24} INFO - extracting datasets from S3...
+[2020-09-25 01:13:41,119] {process_data_up_s3.py:21} INFO - Beging to files verification to processing...
+[2020-09-25 01:13:41,120] {process_data_up_s3.py:28} INFO - files to process ['hdi_human_development_index_hdig_value.jsonl', 'world_currencies_conversion_rates.csv', 'dca_dataset_loan_transactions.jsonl', 'dca_dataset_utilization_and_claims.jsonl']
+[2020-09-25 01:13:41,120] {process_data_up_s3.py:30} INFO - miss files []
+[2020-09-25 01:13:41,121] {process_data_up_s3.py:32} INFO - improper files []
+[2020-09-25 01:13:41,126] {process_data_up_s3.py:46} INFO - file to proccess jsonl
+[2020-09-25 01:13:41,126] {process_json_file.py:25} INFO - reading and processing dataset.. hdi_human_development_index_hdig_value
+[2020-09-25 01:13:41,135] {process_json_file.py:35} WARNING - Error in json loads {"id": "1022", "utc_created": "2016-01-07 10:10:52.689964", "utc_updated": "2016-01-07 10:10:52.690139", "country": "Kenya", "country_code": "KEN", "indicator_code": "137506", "indicator": "HDI: Human development index (HDIg) value", value": "459", "year": "1985"}
+[2020-09-25 01:13:41,139] {process_json_file.py:35} WARNING - Error in json loads 
+[2020-09-25 01:13:41,139] {process_json_file.py:35} WARNING - Error in json loads {"id": "1685", "utc_created": "2016-01-07 10:10:52.689964" "utc_updated": "2016-01-07 10:10:52.690139", "country": "Sudan", "country_code": "SDN", "indicator_code": "137506", "indicator": "HDI: Human development index (HDIg) value", "value": "458", "year": "2009"}
+[2020-09-25 01:13:41,146] {process_json_file.py:42} INFO - saving data into file.. hdi_human_development_index_hdig_value : 2119 rows
+[2020-09-25 01:13:41,208] {process_json_file.py:56} INFO - trying connect to AWS S3...
+[2020-09-25 01:13:42,811] {process_json_file.py:59} INFO - connected to AWS S3...
+[2020-09-25 01:13:42,812] {process_json_file.py:66} INFO - saving dataset to AWS S3...
+[2020-09-25 01:13:44,167] {process_data_up_s3.py:50} INFO - file to proccess csv
+[2020-09-25 01:13:44,183] {process_csv_file.py:19} INFO - reading and processing dataset.. world_currencies_conversion_rates
+[2020-09-25 01:13:44,195] {process_csv_file.py:25} INFO - saving data into file.. world_currencies_conversion_rates : 1000 rows
+[2020-09-25 01:13:44,205] {process_csv_file.py:28} INFO - data saved on file
+[2020-09-25 01:13:44,210] {process_csv_file.py:25} INFO - saving data into file.. world_currencies_conversion_rates : 2000 rows
+[2020-09-25 01:13:44,220] {process_csv_file.py:28} INFO - data saved on file
+[2020-09-25 01:13:44,226] {process_csv_file.py:25} INFO - saving data into file.. world_currencies_conversion_rates : 3000 rows
+[2020-09-25 01:13:44,239] {process_csv_file.py:28} INFO - data saved on file
+[2020-09-25 01:13:44,244] {process_csv_file.py:25} INFO - saving data into file.. world_currencies_conversion_rates : 3230 rows
+[2020-09-25 01:13:44,269] {process_csv_file.py:28} INFO - data saved on file
+[2020-09-25 01:13:44,269] {process_csv_file.py:37} INFO - trying connect to AWS S3...
+[2020-09-25 01:13:45,716] {process_csv_file.py:40} INFO - connected to AWS S3...
+[2020-09-25 01:13:45,716] {process_csv_file.py:47} INFO - saving dataset to AWS S3...
+[2020-09-25 01:13:46,778] {process_data_up_s3.py:46} INFO - file to proccess jsonl
+[2020-09-25 01:13:46,781] {process_json_file.py:25} INFO - reading and processing dataset.. dca_dataset_loan_transactions
+[2020-09-25 01:13:47,507] {process_json_file.py:35} WARNING - Error in json loads "Guarantee Number": "524-DCA-04-002 (MicroEnt)", "Transaction Report ID": "339495", "Amount (USD)": "100000", "Currency Name": "UNITED STATES - DOLLAR", "End Date": "8/17/2017", "Business Sector": "Other Service", "City/Town": "Managua", "State/Province/Region Name": "Managua", "State/Province/Region Code": "NU10", "Country Name": "Nicaragua", "Region Name": "LATIN AMERICA & THE CARIBBEAN", "Latitude": "12.142387", "Longitude": "-86.255792", "Is Woman Owned?": "f", "Is First Time Borrower?": "f", "Business Size": "6--10"}
+[2020-09-25 01:13:47,507] {process_json_file.py:35} WARNING - Error in json loads {"Guarantee Number": "524-DCA-04-002 (MicroEnt)", "Transaction Report ID": "363348", "Amount (USD)": "23200", "Currency Name": "UNITED STATES - DOLLAR", "End Date": "3/6/2017", "Business Sector": "Health", "City/Town": "Managua", "State/Province/Region Name": "Managua", "State/Province/Region Code": "NU10", "Country Name": "Nicaragua", "Region Name": "LATIN AMERICA & THE CARIBBEAN", "Latitude 12.142387", "Longitude": "-86.255792", "Is Woman Owned?": "f", "Is First Time Borrower?": "t", "Business Size": "1--5"}
+[2020-09-25 01:13:47,508] {process_json_file.py:35} WARNING - Error in json loads {"Guarantee Number": "524-DCA-04-002 (MicroEnt)", "Transaction Report ID": "363353", "Amount (USD)": "40000", "Currency Name": "UNITED STATES - DOLLAR", "End Date": "3/7/2015", "Business Sector": "Other Service", "City/Town": "Managua", "State/Province/Region Name": "Managua", "State/Province/Region Code": "NU10", "Country Name": "Nicaragua", "Region Name": "LATIN AMERICA & THE CARIBBEAN", "Latitude: "12.142387", "Longitude": "-86.255792", "Is Woman Owned?": "f", "Is First Time Borrower?": "t", "Business Size": "11--50"}
+[2020-09-25 01:13:47,508] {process_json_file.py:35} WARNING - Error in json loads 
+[2020-09-25 01:13:48,740] {process_json_file.py:42} INFO - saving data into file.. dca_dataset_loan_transactions : 164318 rows
+[2020-09-25 01:13:49,354] {process_json_file.py:56} INFO - trying connect to AWS S3...
+[2020-09-25 01:13:50,920] {process_json_file.py:59} INFO - connected to AWS S3...
+[2020-09-25 01:13:50,921] {process_json_file.py:66} INFO - saving dataset to AWS S3...
+[2020-09-25 01:13:58,718] {process_data_up_s3.py:46} INFO - file to proccess jsonl
+[2020-09-25 01:13:58,719] {process_json_file.py:25} INFO - reading and processing dataset.. dca_dataset_utilization_and_claims
+[2020-09-25 01:13:58,725] {process_json_file.py:35} WARNING - Error in json loads {"Fiscal Year": "2014", "Guarantee Number": "306-DCA-14-003C", "Partner Name": "FMFB Afghanistan", "Country": "Afghanistan", "Guarantee Start Date": "2014/09/25" "Guarantee End Date": "2020/09/25", "Final Date for Placing Loans under Coverage": "2018/09/30", "Primary Target Segment": "Micro", "Secondary Target Segment(s)": "", "Primary Target Sector": "General", "Secondary Target Sector(s)": "", "Credit Agreement Type": "Portable Guarantee", "Status": "Active", "Guarantee Percentage": "40.00%", "Effective Maximum Cumulative Disbursements": "$3,000,000 ", "Cumulative Utilization": "$0 ", "Cumulative Utilization Percentage": "0.00%", "Cumulative Loans": "0", "Claims": "$0 ", "Recoveries": "$0 "}
+[2020-09-25 01:13:58,726] {process_json_file.py:35} WARNING - Error in json loads 
+[2020-09-25 01:13:58,734] {process_json_file.py:42} INFO - saving data into file.. dca_dataset_utilization_and_claims : 587 rows
+[2020-09-25 01:13:58,775] {process_json_file.py:56} INFO - trying connect to AWS S3...
+[2020-09-25 01:14:00,206] {process_json_file.py:59} INFO - connected to AWS S3...
+[2020-09-25 01:14:00,207] {process_json_file.py:66} INFO - saving dataset to AWS S3...
+[2020-09-25 01:14:01,609] {truncate_tables.py:11} INFO - begin truncating tables...
+[2020-09-25 01:14:01,746] {truncate_tables.py:17} INFO - truncate table stage.dca_dataset_loan_transactions
+[2020-09-25 01:14:01,753] {truncate_tables.py:17} INFO - truncate table stage.dca_dataset_utilization_and_claims
+[2020-09-25 01:14:01,761] {truncate_tables.py:17} INFO - truncate table stage.hdi_human_development_index_hdig_value
+[2020-09-25 01:14:01,774] {truncate_tables.py:17} INFO - truncate table stage.world_currencies_conversion_rates
+[2020-09-25 01:14:01,801] {truncate_tables.py:22} INFO - tables truncated...
+[2020-09-25 01:14:02,352] {data_insert_stg.py:23} INFO - inserting file dca_dataset_loan_transactions.snappy.parquet
+[2020-09-25 01:14:29,323] {data_insert_stg.py:32} INFO - inserted <164318> rows
+[2020-09-25 01:14:29,487] {data_insert_stg.py:23} INFO - inserting file dca_dataset_utilization_and_claims.snappy.parquet
+[2020-09-25 01:14:29,600] {data_insert_stg.py:32} INFO - inserted <587> rows
+[2020-09-25 01:14:29,788] {data_insert_stg.py:23} INFO - inserting file hdi_human_development_index_hdig_value.snappy.parquet
+[2020-09-25 01:14:29,955] {data_insert_stg.py:32} INFO - inserted <2119> rows
+[2020-09-25 01:14:30,129] {data_insert_stg.py:23} INFO - inserting file world_currencies_conversion_rates.snappy.parquet
+[2020-09-25 01:14:30,484] {data_insert_stg.py:32} INFO - inserted <3230> rows
+[2020-09-25 01:14:30,584] {data_insert_aux.py:16} INFO - Running query dca_dataset_loan_transactions
+[2020-09-25 01:14:34,234] {data_insert_aux.py:22} INFO - Success to process dca_dataset_loan_transactions
+[2020-09-25 01:14:34,434] {data_insert_aux.py:16} INFO - Running query dca_dataset_utilization_and_claims
+[2020-09-25 01:14:34,465] {data_insert_aux.py:22} INFO - Success to process dca_dataset_utilization_and_claims
+[2020-09-25 01:14:34,634] {data_insert_aux.py:16} INFO - Running query hdi_human_development_index_hdig_value
+[2020-09-25 01:14:34,667] {data_insert_aux.py:22} INFO - Success to process hdi_human_development_index_hdig_value
+[2020-09-25 01:14:34,806] {data_insert_aux.py:16} INFO - Running query world_currencies_conversion_rates
+[2020-09-25 01:14:34,854] {data_insert_aux.py:22} INFO - Success to process world_currencies_conversion_rates
+[2020-09-25 01:14:35,010] {data_insert_prd.py:18} INFO - Running query dca_dataset_loan_transactions
+[2020-09-25 01:15:17,479] {data_insert_prd.py:23} INFO - Success to process dca_dataset_loan_transactions
+[2020-09-25 01:15:17,651] {data_insert_prd.py:18} INFO - Running query dca_dataset_utilization_and_claims
+[2020-09-25 01:15:17,832] {data_insert_prd.py:23} INFO - Success to process dca_dataset_utilization_and_claims
+[2020-09-25 01:15:17,964] {data_insert_prd.py:18} INFO - Running query hdi_human_development_index_hdig_value
+[2020-09-25 01:15:18,282] {data_insert_prd.py:23} INFO - Success to process hdi_human_development_index_hdig_value
+[2020-09-25 01:15:18,448] {data_insert_prd.py:18} INFO - Running query world_currencies_conversion_rates
+[2020-09-25 01:15:18,817] {data_insert_prd.py:23} INFO - Success to process world_currencies_conversion_rates
+[2020-09-25 01:15:18,975] {main.py:57} INFO - ETL execution completed successfully
