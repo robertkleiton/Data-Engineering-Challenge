@@ -61,10 +61,10 @@ Dollar based conversion rates for world currencies from 1950 to 2017.
 
 ### Todas as configurações descritas abaixo são necessárias para pleno funcionamento do ETL.
 Ambiente Amazon Web Services (AWS)
-	1.	Simple Storage Service (S3)
-		1.	Criar/utilizar um bucket.
-		2.	Criar o diretório no bucket.
-			- <nome_bucket>/raw_files.
-		3.	Criar um “access key e secret access key “, com policie de read e write para o bucket que será utilizado.
-	2.	Relational Database Service (RDS).
-		1.	Criar/utilizar Banco de dados RDS PostgreSql.
+1. Simple Storage Service (S3)
+	- Criar/utilizar um bucket.
+2. Criar o diretório no bucket.
+	- <nome_bucket>/raw_files.
+3. Criar um “access key e secret access key “, com policie de read e write para o bucket que será utilizado.
+4. Relational Database Service (RDS).
+	- Criar/utilizar Banco de dados RDS PostgreSql.
