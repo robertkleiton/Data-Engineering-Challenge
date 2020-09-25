@@ -3,7 +3,6 @@ import connect as con
 import variables as var
 import log
 
-# truncate tables stg and aux
 def truncate():
     tables_truncate_list = [var.dca_dataset_loan_transactions[:-15], var.dca_dataset_utilization_and_claims[:-15],
                             var.hdi_human_development_index_hdig_value[:-15], var.world_currencies_conversion_rates[:-15]]

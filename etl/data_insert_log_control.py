@@ -29,6 +29,5 @@ def log_control(execution = 'initial'):
         conn.close()
     conn.close()
 
-# insert_stg(var.dca_dataset_loan_transactions, qr.query_dca_dataset_loan_transactions)
 
 log_control('finish')

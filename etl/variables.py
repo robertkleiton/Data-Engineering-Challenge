@@ -6,9 +6,9 @@ access_key = os.environ.get('VAR_ACCESS_KEY')
 secret_access_key = os.environ.get('VAR_SECRET_ACCESS_KEY')
 
 
-file_input = './raw_file/datasets.tar.gz'
+file_input = './raw_files/datasets.tar.gz'
 output_file = './output_file'
-path_input = 'raw_file/datasets.tar.gz'
+path_input = 'raw_files/datasets.tar.gz'
 path_output = 'distribution_data/{}/year={}/month={}/day={}/{}'
 path_output_error = 'distribution_data/fail/{}/year={}/month={}/day={}/{}'
 

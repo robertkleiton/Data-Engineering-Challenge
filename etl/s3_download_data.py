@@ -30,6 +30,6 @@ def s3_download_dataset(file_input, bucket, path_input):
         sys.exit()
     
     tar = tarfile.open(file_input)
-    tar.extractall('./raw_file')
+    tar.extractall('./raw_files')
     tar.close()
     os.remove(tar.name)

@@ -14,7 +14,7 @@ print('ETL starting')
 log.logger.info('ETL starting')
 
 # # Files extraction from bucket AWS S3 to proccessing
-sdd.s3_download_dataset(var.bucket, var.path_input)
+sdd.s3_download_dataset(var.file_input, var.bucket, var.path_input)
 
 # # Porccessing, handling and uploading of the files format ".parquet" to bucket AWS S3
 pdus.read_dataset(var.bucket, var.path_output)

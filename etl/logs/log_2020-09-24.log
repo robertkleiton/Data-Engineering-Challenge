@@ -1,0 +1,64 @@
+[2020-09-24 23:00:05,834] {main.py:14} INFO - ETL starting
+[2020-09-24 23:00:05,838] {process_data_up_s3.py:21} INFO - Beging to files verification to processing...
+[2020-09-24 23:00:05,838] {process_data_up_s3.py:28} INFO - files to process ['dca_dataset_utilization_and_claims.jsonl', 'world_currencies_conversion_rates.csv', 'dca_dataset_loan_transactions.jsonl', 'hdi_human_development_index_hdig_value.jsonl']
+[2020-09-24 23:00:05,838] {process_data_up_s3.py:30} INFO - miss files []
+[2020-09-24 23:00:05,839] {process_data_up_s3.py:32} INFO - improper files []
+[2020-09-24 23:00:05,839] {process_data_up_s3.py:46} INFO - file to proccess jsonl
+[2020-09-24 23:00:05,841] {process_json_file.py:24} INFO - reading and processing dataset.. dca_dataset_utilization_and_claims
+[2020-09-24 23:00:05,855] {process_json_file.py:34} WARNING - Error in json loads {"Fiscal Year": "2014", "Guarantee Number": "306-DCA-14-003C", "Partner Name": "FMFB Afghanistan", "Country": "Afghanistan", "Guarantee Start Date": "2014/09/25" "Guarantee End Date": "2020/09/25", "Final Date for Placing Loans under Coverage": "2018/09/30", "Primary Target Segment": "Micro", "Secondary Target Segment(s)": "", "Primary Target Sector": "General", "Secondary Target Sector(s)": "", "Credit Agreement Type": "Portable Guarantee", "Status": "Active", "Guarantee Percentage": "40.00%", "Effective Maximum Cumulative Disbursements": "$3,000,000 ", "Cumulative Utilization": "$0 ", "Cumulative Utilization Percentage": "0.00%", "Cumulative Loans": "0", "Claims": "$0 ", "Recoveries": "$0 "}
+[2020-09-24 23:00:05,855] {process_json_file.py:34} WARNING - Error in json loads 
+[2020-09-24 23:00:05,887] {process_json_file.py:41} INFO - saving data into file.. dca_dataset_utilization_and_claims : 587 rows
+[2020-09-24 23:00:06,337] {process_data_up_s3.py:50} INFO - file to proccess csv
+[2020-09-24 23:00:06,342] {process_csv_file.py:18} INFO - reading and processing dataset.. world_currencies_conversion_rates
+[2020-09-24 23:00:06,379] {process_csv_file.py:24} INFO - saving data into file.. world_currencies_conversion_rates : 1000 rows
+[2020-09-24 23:00:06,435] {process_csv_file.py:27} INFO - data saved on file
+[2020-09-24 23:00:06,464] {process_csv_file.py:24} INFO - saving data into file.. world_currencies_conversion_rates : 2000 rows
+[2020-09-24 23:00:06,501] {process_csv_file.py:27} INFO - data saved on file
+[2020-09-24 23:00:06,518] {process_csv_file.py:24} INFO - saving data into file.. world_currencies_conversion_rates : 3000 rows
+[2020-09-24 23:00:06,548] {process_csv_file.py:27} INFO - data saved on file
+[2020-09-24 23:00:06,562] {process_csv_file.py:24} INFO - saving data into file.. world_currencies_conversion_rates : 3230 rows
+[2020-09-24 23:00:06,592] {process_csv_file.py:27} INFO - data saved on file
+[2020-09-24 23:00:06,593] {process_data_up_s3.py:46} INFO - file to proccess jsonl
+[2020-09-24 23:00:06,594] {process_json_file.py:24} INFO - reading and processing dataset.. dca_dataset_loan_transactions
+[2020-09-24 23:00:07,895] {process_json_file.py:34} WARNING - Error in json loads "Guarantee Number": "524-DCA-04-002 (MicroEnt)", "Transaction Report ID": "339495", "Amount (USD)": "100000", "Currency Name": "UNITED STATES - DOLLAR", "End Date": "8/17/2017", "Business Sector": "Other Service", "City/Town": "Managua", "State/Province/Region Name": "Managua", "State/Province/Region Code": "NU10", "Country Name": "Nicaragua", "Region Name": "LATIN AMERICA & THE CARIBBEAN", "Latitude": "12.142387", "Longitude": "-86.255792", "Is Woman Owned?": "f", "Is First Time Borrower?": "f", "Business Size": "6--10"}
+[2020-09-24 23:00:07,895] {process_json_file.py:34} WARNING - Error in json loads {"Guarantee Number": "524-DCA-04-002 (MicroEnt)", "Transaction Report ID": "363348", "Amount (USD)": "23200", "Currency Name": "UNITED STATES - DOLLAR", "End Date": "3/6/2017", "Business Sector": "Health", "City/Town": "Managua", "State/Province/Region Name": "Managua", "State/Province/Region Code": "NU10", "Country Name": "Nicaragua", "Region Name": "LATIN AMERICA & THE CARIBBEAN", "Latitude 12.142387", "Longitude": "-86.255792", "Is Woman Owned?": "f", "Is First Time Borrower?": "t", "Business Size": "1--5"}
+[2020-09-24 23:00:07,895] {process_json_file.py:34} WARNING - Error in json loads {"Guarantee Number": "524-DCA-04-002 (MicroEnt)", "Transaction Report ID": "363353", "Amount (USD)": "40000", "Currency Name": "UNITED STATES - DOLLAR", "End Date": "3/7/2015", "Business Sector": "Other Service", "City/Town": "Managua", "State/Province/Region Name": "Managua", "State/Province/Region Code": "NU10", "Country Name": "Nicaragua", "Region Name": "LATIN AMERICA & THE CARIBBEAN", "Latitude: "12.142387", "Longitude": "-86.255792", "Is Woman Owned?": "f", "Is First Time Borrower?": "t", "Business Size": "11--50"}
+[2020-09-24 23:00:07,895] {process_json_file.py:34} WARNING - Error in json loads 
+[2020-09-24 23:00:10,134] {process_json_file.py:41} INFO - saving data into file.. dca_dataset_loan_transactions : 164318 rows
+[2020-09-24 23:00:12,037] {process_data_up_s3.py:46} INFO - file to proccess jsonl
+[2020-09-24 23:00:12,038] {process_json_file.py:24} INFO - reading and processing dataset.. hdi_human_development_index_hdig_value
+[2020-09-24 23:00:12,050] {process_json_file.py:34} WARNING - Error in json loads {"id": "1022", "utc_created": "2016-01-07 10:10:52.689964", "utc_updated": "2016-01-07 10:10:52.690139", "country": "Kenya", "country_code": "KEN", "indicator_code": "137506", "indicator": "HDI: Human development index (HDIg) value", value": "459", "year": "1985"}
+[2020-09-24 23:00:12,058] {process_json_file.py:34} WARNING - Error in json loads 
+[2020-09-24 23:00:12,058] {process_json_file.py:34} WARNING - Error in json loads {"id": "1685", "utc_created": "2016-01-07 10:10:52.689964" "utc_updated": "2016-01-07 10:10:52.690139", "country": "Sudan", "country_code": "SDN", "indicator_code": "137506", "indicator": "HDI: Human development index (HDIg) value", "value": "458", "year": "2009"}
+[2020-09-24 23:00:12,075] {process_json_file.py:41} INFO - saving data into file.. hdi_human_development_index_hdig_value : 2119 rows
+[2020-09-24 23:00:12,087] {truncate_tables.py:11} INFO - begin truncating tables...
+[2020-09-24 23:00:12,466] {truncate_tables.py:17} INFO - truncate table stage.dca_dataset_loan_transactions
+[2020-09-24 23:00:12,485] {truncate_tables.py:17} INFO - truncate table stage.dca_dataset_utilization_and_claims
+[2020-09-24 23:00:12,502] {truncate_tables.py:17} INFO - truncate table stage.hdi_human_development_index_hdig_value
+[2020-09-24 23:00:12,520] {truncate_tables.py:17} INFO - truncate table stage.world_currencies_conversion_rates
+[2020-09-24 23:00:12,594] {truncate_tables.py:22} INFO - tables truncated...
+[2020-09-24 23:00:13,687] {data_insert_stg.py:23} INFO - inserting file dca_dataset_loan_transactions.snappy.parquet
+[2020-09-24 23:01:16,735] {data_insert_stg.py:32} INFO - inserted <164318> rows
+[2020-09-24 23:01:17,093] {data_insert_stg.py:23} INFO - inserting file dca_dataset_utilization_and_claims.snappy.parquet
+[2020-09-24 23:01:17,399] {data_insert_stg.py:32} INFO - inserted <587> rows
+[2020-09-24 23:01:17,700] {data_insert_stg.py:23} INFO - inserting file hdi_human_development_index_hdig_value.snappy.parquet
+[2020-09-24 23:01:18,143] {data_insert_stg.py:32} INFO - inserted <2119> rows
+[2020-09-24 23:01:18,387] {data_insert_stg.py:23} INFO - inserting file world_currencies_conversion_rates.snappy.parquet
+[2020-09-24 23:01:19,225] {data_insert_stg.py:32} INFO - inserted <3230> rows
+[2020-09-24 23:01:19,553] {data_insert_aux.py:16} INFO - Running query dca_dataset_loan_transactions
+[2020-09-24 23:01:27,244] {data_insert_aux.py:22} INFO - Success to process dca_dataset_loan_transactions
+[2020-09-24 23:01:27,572] {data_insert_aux.py:16} INFO - Running query dca_dataset_utilization_and_claims
+[2020-09-24 23:01:27,645] {data_insert_aux.py:22} INFO - Success to process dca_dataset_utilization_and_claims
+[2020-09-24 23:01:27,999] {data_insert_aux.py:16} INFO - Running query hdi_human_development_index_hdig_value
+[2020-09-24 23:01:28,061] {data_insert_aux.py:22} INFO - Success to process hdi_human_development_index_hdig_value
+[2020-09-24 23:01:28,249] {data_insert_aux.py:16} INFO - Running query world_currencies_conversion_rates
+[2020-09-24 23:01:28,345] {data_insert_aux.py:22} INFO - Success to process world_currencies_conversion_rates
+[2020-09-24 23:01:28,568] {data_insert_prd.py:18} INFO - Running query dca_dataset_loan_transactions
+[2020-09-24 23:03:14,496] {data_insert_prd.py:23} INFO - Success to process dca_dataset_loan_transactions
+[2020-09-24 23:03:14,811] {data_insert_prd.py:18} INFO - Running query dca_dataset_utilization_and_claims
+[2020-09-24 23:03:16,148] {data_insert_prd.py:23} INFO - Success to process dca_dataset_utilization_and_claims
+[2020-09-24 23:03:16,510] {data_insert_prd.py:18} INFO - Running query hdi_human_development_index_hdig_value
+[2020-09-24 23:03:17,277] {data_insert_prd.py:23} INFO - Success to process hdi_human_development_index_hdig_value
+[2020-09-24 23:03:17,488] {data_insert_prd.py:18} INFO - Running query world_currencies_conversion_rates
+[2020-09-24 23:03:18,554] {data_insert_prd.py:23} INFO - Success to process world_currencies_conversion_rates
+[2020-09-24 23:03:18,968] {main.py:57} INFO - ETL execution completed successfully

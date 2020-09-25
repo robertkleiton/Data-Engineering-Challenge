@@ -1,5 +1,6 @@
 #!usr/bin/python
 # coding: utf-8
+
 import psycopg2
 import boto3
 import sys
@@ -23,8 +24,6 @@ def connect_db():
     return connect_database()
 
 def connect_s3():
-    # -- alterar para session
-	# s3_client = boto3.client('s3', aws_access_key_id = var.access_key, aws_secret_access_key = var.secret_access_key)
 	session = boto3.Session(aws_access_key_id = var.access_key, aws_secret_access_key = var.secret_access_key)
-	s3_client = session.resource('S3')
+	s3_client = session.resource('s3')
 	return s3_client
