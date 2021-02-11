@@ -17,7 +17,7 @@ This project has goal to run ETL flow to process data using AWS and Python 3
 		- EC2 (Linux)
 		- S3
 
-### Scenery
+### Scenario
 Original source of data: data.usaid.gov
 
 For this project, the scenario follows
