@@ -14,7 +14,7 @@ file_container = os.listdir('./raw_files')
 
 def check_files(list_from, list_in):
     try:
-s        log.logger.info('Beging to files verification to processing...')
+        log.logger.info('Beging to files verification to processing...')
         set_1 = set(list_from)
         set_2 = set(list_in)
         to_process = list(set_1.intersection(set_2))
