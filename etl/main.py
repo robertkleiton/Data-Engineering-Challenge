@@ -25,7 +25,6 @@ tr.truncate()
 # # Update log_control table
 lc.log_control('initial')
 
-
 # # Inserting raw data on stage tables
 dis.insert_stg(var.dca_dataset_loan_transactions, qr.query_dca_dataset_loan_transactions)
 

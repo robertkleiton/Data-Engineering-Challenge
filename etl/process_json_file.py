@@ -74,6 +74,14 @@ def read_jsonl(file, bucket, prefix_output):
             log.logger.error('fail to save file to AWS S3')
             log.logger.error(erro)
             sys.exit()
+        try:
+            print('Cleaning files from path out')
+            log.logger.info('Cleaning files from path out')
+            os.remove(parquet_file_input)
+            os.remove(file_error_input)
+        except Exception as erro:
+            print(erro) 
+            log.logger.error(erro)
     except Exception as erro:
         log.logger.error(erro)
         print('read and proccess dataset success')

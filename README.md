@@ -1,34 +1,35 @@
 # Data Engineering Challenge
 
-### Objetivo
-Este pequeno projeto tem o objetivo de executar um fluxo de ETL para processamento de dados utilizando o ambiente AWS e Python 3.
+### Purpose Porject
+This project has goal to run ETL flow to process data using AWS and Python 3
 
-### Recursos Tecnológicos
+### Resources
 1. Python 3.X
-	- Bibliotecas necessárias para instalar
+	- Library needed to install
 		- Pandas
 		- Boto3
 		- Pyarrow
 		- Psycopg2
 		- Virtualenv
 2. AWS
-	- Serviços utilizados:
+	- Cloud services used:
 		- RDS (PostgreSql)
 		- EC2 (Linux)
 		- S3
 
-### Cenário
-Fonte original dos dados: data.usaid.gov
-Para este processo assumi-se o seguinte cenário.
-	Proprietários dos dados de origem disponibilizam os arquivos diariamente para processamento em um bucket do S3.
-		Dado que:
-		- source_bucket = nome do bucket definido pelo dono da conta.
-		- raw_file = pasta criada no bucket.
-		- datasets.tar.gz = arquivos origens para processamento, inseridos pelo proprietário.
+### Scenery
+Original source of data: data.usaid.gov
+
+For this project, the scenario follows
+	The source data's owner put files on bucket in the AWS S3.
+		- source_bucket = The S3 bucket's man defined.
+		- raw_file = Path created.
+		- datasets.tar.gz = The raw file's.
 			<source_bucket>/raw_file/datasets.tar.gz
 
 
-Sobre os arquivos:
+
+About the files
 
 #### dca_dataset_loan_transactions.jsonl
 This dataset is the complete list of all private loans made under USAID's DCA since it was established in 1999. To protect the personal information of borrowers and bank partners, all strategic and personal identifiable information was removed. For explanations and limitations of the dataset, download the attachment in the metadata.
@@ -51,20 +52,22 @@ Dollar based conversion rates for world currencies from 1950 to 2017.
 #### url: *[https://data.oecd.org/conversion/exchange-rates.htm](https://data.oecd.org/conversion/exchange-rates.htm)*
 	
 
-### Arquitetura ETL.
+### ETL's Architecture.
 
 ![](./images/etl_flow.jpg)
 
 
 
-### Preparação do Ambiente de Simulação.
+### Enviroment to Simulation.
 
-### Todas as configurações descritas abaixo são necessárias para pleno funcionamento do ETL.
-Ambiente Amazon Web Services (AWS)
+### The all configurations needed ETL to works well
+
+Amazon Web Services (AWS) enviroment.
 1. Simple Storage Service (S3)
-	- Criar/utilizar um bucket.
-2. Criar o diretório no bucket.
-	- <nome_bucket>/raw_files.
-3. Criar um “access key e secret access key “, com policie de read e write para o bucket que será utilizado.
+	- Create/use a bucket.
+2. Create the path on the bucket.
+	- <bucket_name>/raw_files.
+3. Create one "access key and secret access key", with policies to read and to write.
+
 4. Relational Database Service (RDS).
-	- Criar/utilizar Banco de dados RDS PostgreSql.
+	- Create/use database RDS "PostgreSql".
